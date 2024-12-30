@@ -7,12 +7,12 @@ class Game;
 class EventEngine{
 private:
   SDL_Event event;
-  Game* game;
+  int gameExited;
 
 public:
   EventEngine();
-  EventEngine(Game* game);
   ~EventEngine();
   
   void PollEvents();
+  int isGameExited();
 };

@@ -1,8 +1,8 @@
 #include "Game.hpp"
 
-Game::Game(): eventEngine(this), active(1){
+Game::Game(){
   graphicsEngine.WindowInit("New Window", 800, 600);
-  while(this->active){
+  while(!eventEngine.isGameExited()){
     eventEngine.PollEvents();
     graphicsEngine.Draw();
   }
@@ -10,7 +10,3 @@ Game::Game(): eventEngine(this), active(1){
 }
 
 Game::~Game(){}
-
-void Game::Stop(){
-  active = 0;
-}

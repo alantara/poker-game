@@ -3,8 +3,7 @@
 #include <iostream>
 #include "../Game/Game.hpp"
 
-EventEngine::EventEngine(){}
-EventEngine::EventEngine(Game* game): game(game){}
+EventEngine::EventEngine(): gameExited(0){}
  
 EventEngine::~EventEngine(){}
  
@@ -13,10 +12,14 @@ void EventEngine:: PollEvents(){
   switch (this->event.type)
   {
   case SDL_QUIT:
-    game->Stop();
+    gameExited = 1;
     break;
   
   default:
     break;
   }
+}
+
+int EventEngine::isGameExited(){
+  return gameExited;
 }

@@ -7,11 +7,8 @@ class Game{
 private:
   GraphicsEngine graphicsEngine;
   EventEngine eventEngine;
-  int active;
 
 public:
   Game();
   ~Game();
-
-  void Stop();
 };
