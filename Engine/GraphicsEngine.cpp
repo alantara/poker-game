@@ -34,7 +34,7 @@ void GraphicsEngine::WindowDestroy(){
 }
 
 void GraphicsEngine::Draw(){
-  SDL_SetRenderDrawColor(this->renderer, 20, 20, 255, 255);
+  SDL_SetRenderDrawColor(this->renderer, 220, 80, 255, 255);
   SDL_RenderClear(this->renderer);
 
   SDL_RenderPresent(this->renderer);
