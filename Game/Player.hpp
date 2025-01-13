@@ -1,6 +1,8 @@
 #pragma once
+
 #include "Card.hpp"
 #include <string>
+#include <iostream>
 
 class Player{
     private:
@@ -9,10 +11,10 @@ class Player{
     std::string name;
     
     public:
-    Player();
+    Player(int c=0, Card* h= NULL, std::string n= "");
     ~Player();
 
-    int bet();
-    //chech e call
+    int bet(int value);
+    //check e call
 
 };

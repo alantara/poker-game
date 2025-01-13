@@ -6,7 +6,7 @@ class Card{
     char suit;
 
     public:
-    Card(int val, char s);
+    Card(int val=0, char s='x');
     ~Card();
     
 };

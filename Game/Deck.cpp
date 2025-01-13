@@ -20,8 +20,8 @@ void Deck::shuffle(){
 }
 
 Card Deck::deal(){
-    Card* copy = position;
-    position--;
+    Card* copy = position; 
+    position--; //acho q n funciona
 
     return *copy;
 }
